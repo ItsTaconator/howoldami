@@ -5,7 +5,8 @@ A program for getting how old your OS install is
 (images generated with [termshot](https://github.com/homeport/termshot))
 
 # How to use
-`./howoldami`
+Download binary for your OS from Releases
+Run it in terminal
 
 # Supported OSes
 - Windows (probably)
