@@ -9,8 +9,5 @@ cross build --target aarch64-unknown-linux-gnu -r
 # Build for x64 Windows
 echo "Building for x64 Windows"
 cross build --target x86_64-pc-windows-gnu
-# Build for AArch64 Mac (needs aarch64-apple-darwin target installed)
-echo "Building for AArch64 Apple"
-cargo build --target aarch64-apple-darwin
 # Build for native architecture
 cargo build --release
