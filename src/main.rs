@@ -22,8 +22,8 @@ fn main() {
     #[cfg(target_os = "macos")]
     let os = "macOS".to_owned();
 
-    // Get OS on anything that is Linux-based
-    #[cfg(target_os = "linux")]
+    // Get OS on anything that is Linux or FreeBSD based
+    #[cfg(any(target_os = "linux", target_os = "freebsd"))]
     let os = {
         use etc_os_release::OsRelease;
 
