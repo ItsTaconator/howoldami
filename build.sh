@@ -9,6 +9,6 @@ echo "Building for AArch64 Linux GNU"
 cross build --target aarch64-unknown-linux-gnu -r
 # Build for x64 Windows
 echo "Building for x64 Windows"
-cross build --target x86_64-pc-windows-gnu
+cross build --target x86_64-pc-windows-gnu -r
 # Build for native architecture
-cargo build --release
+cargo build -r
