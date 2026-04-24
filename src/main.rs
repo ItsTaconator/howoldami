@@ -109,6 +109,6 @@ fn format_with_os_color(os: &str, str_to_format: &str) -> String {
         s if ORANGE.iter().any(|d| s.contains(d)) => str_to_format.bright_red().to_string(), // I don't know if bright red is the best choice for orange, but I don't have access to orange
         s if YELLOW.iter().any(|d| s.contains(d)) => str_to_format.yellow().to_string(),
         s if RED.iter().any(|d| s.contains(d)) => str_to_format.red().to_string(),
-        _ => os.green().to_string(),
+        _ => str_to_format.blue().to_string(),
     }
 }
