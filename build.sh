@@ -1,4 +1,5 @@
 #!/bin/sh
+# This requires cross since it's the easiest way to cross-compile
 cargo clean
 # Build for AArch64 MUSL (example: Alpine Linux on a Pi)
 echo "Building for AArch64 Linux MUSL"
