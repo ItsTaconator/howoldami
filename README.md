@@ -6,6 +6,7 @@ A program for getting how old your OS install is
 
 # How to use
 Download binary for your OS from Releases
+
 Run it in terminal
 
 # Supported OSes
