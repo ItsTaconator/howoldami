@@ -34,12 +34,17 @@ fn main() {
         }
     };
 
-    // Quit if not on Windows, Mac, or Linux
-    #[cfg(not(any(target_os = "windows", target_os = "macos", target_os = "linux")))]
+    // Get OS from envvar if doesn't match any others
+    #[cfg(not(any(
+        target_os = "windows",
+        target_os = "macos",
+        target_os = "linux",
+        target_os = "freebsd"
+    )))]
     {
-        eprintln!("Unsupported OS");
-        return;
-    }
+        use titlecase::{Titlecase, titlecase};
+        let os = std::env::consts::OS.titlecase();
+    };
 
     // Get install time
     let install_time = get_install_time();

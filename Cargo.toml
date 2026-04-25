@@ -8,6 +8,9 @@ etc-os-release = "0.1.1"
 humanize-duration = { version = "0.0.7"}
 owo-colors = "4.3.0"
 
+[target.'cfg(not(any(target_os = "windows", target_os = "macos", target_os = "linux", target_os = "freebsd")))'.dependencies]
+titlecase = "3.6.0"
+
 [profile.release]
 codegen-units = 1
 lto = true
