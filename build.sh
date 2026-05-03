@@ -1,5 +1,10 @@
 #!/bin/sh
 # This requires cross since it's the easiest way to cross-compile
+if ! command -v cross >/dev/null 2>&1
+then
+	printf "cross is required by this build script"
+	exit
+fi
 cargo clean
 # Build for AArch64 MUSL (example: Alpine Linux on a Pi)
 echo "Building for AArch64 Linux MUSL"
